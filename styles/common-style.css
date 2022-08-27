@@ -1,0 +1,65 @@
+/*Common styles*/
+/*FLEX*/
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --page-padding-h: 3rem;
+  --header-height: 4rem;
+}
+
+body,
+html {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  max-width: 125rem;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+/*FONT*/
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  body {
+    --page-padding-h: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=common-style.css.map */

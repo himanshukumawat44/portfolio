@@ -1,0 +1,296 @@
+.hk-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: var(--header-height);
+  background: white;
+  z-index: 2;
+  &.hk-header-has-shadow {
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+  }
+  .hk-nav {
+    justify-content: end;
+    height: 100%;
+    .hk-nav-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0 2rem;
+
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      color: black;
+
+      &.hk-nav-link-active,
+      &.hk-nav-link-active:hover {
+        background-color: #e3ecf7;
+        color: #286ec5;
+        cursor: unset;
+      }
+      &:hover {
+        background-color: #edf3fb;
+      }
+      .hk-nav-link-icon {
+        margin-left: 0.5rem;
+        &.hk-nav-link-icon-about {
+          .hk-nav-link-icon-about-tag {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hk-main {
+  padding-top: var(--header-height);
+  .hk-section {
+    position: relative;
+    min-height: calc(100vh - var(--header-height));
+
+    overflow: hidden;
+    padding: 4rem var(--page-padding-h);
+    padding-top: 18rem;
+    &.hk-section-about {
+      padding-top: 4rem;
+      padding-bottom: 0;
+      .hk-about-text-container {
+        width: 50%;
+        .hk-section-header {
+          .hk-section-header-line {
+            display: block;
+          }
+        }
+      }
+      .hk-about-img-container {
+        width: 50%;
+        .hk-image {
+          width: 100%;
+          margin-top: auto;
+        }
+      }
+      .section-back-tag {
+        top: 0rem;
+      }
+    }
+
+    &.hk-section-skills {
+      min-height: unset;
+
+      .hk-skills {
+        justify-content: space-between;
+        .hk-skill {
+          position: relative;
+          font-size: 1rem;
+          margin-right: 0rem;
+          margin-bottom: 5rem;
+          padding: 1rem;
+          background: white;
+          overflow: hidden;
+          border-radius: 1rem;
+          .hk-skill-logo {
+            position: absolute;
+            opacity: 0.2;
+            font-size: 7rem;
+            top: -31px;
+            color: #286ec5;
+            left: -1.2rem;
+          }
+          .hk-skill-label {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #286ecf;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &.hk-section-experience {
+      .hk-exp-timeline {
+        .hk-timeline-node {
+          display: flex;
+          margin-bottom: 2rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+            .node-leading {
+              &::after {
+                display: none;
+              }
+            }
+          }
+
+          .node-leading {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .leading-avatar {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              background: #286ec5;
+              color: white;
+              border: solid 0.25rem #286ec5;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 3rem;
+              width: 0.25rem;
+              height: 100%;
+              background: #286ec5;
+            }
+          }
+          .node-content {
+            margin-left: 1rem;
+            .content-time-range {
+              font-size: 1rem;
+              font-weight: bold;
+              color: #7c7c7c;
+              margin-top: 0.75rem;
+            }
+            .content-title {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
+            .content-description {
+              margin-top: 1rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+    &.hk-section-contact-me {
+      .hk-contact-options {
+        .hk-contact-option {
+          font-size: 3rem;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          .hk-contact-option-label {
+            word-break: break-all;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+    &:nth-of-type(2n) {
+      background: #efefef;
+    }
+
+    .section-back-tag {
+      position: absolute;
+
+      top: 2rem;
+      /* left: 120px; */
+      font-weight: bold;
+      font-size: 10rem;
+      color: #286ec5;
+      opacity: 0.2;
+      /* transform: rotate(90deg); */
+      transform-origin: top left;
+      white-space: nowrap;
+    }
+  }
+}
+
+.hk-footer {
+  .hk-footer-note {
+    padding: 1rem 2rem;
+    text-align: center;
+    .hk-footer-note-icon-heart {
+      color: red;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hk-header {
+    .hk-nav {
+      flex: 1;
+      .hk-nav-link {
+        padding: 0 1rem;
+        flex: 1;
+        .hk-nav-link-label {
+          display: none;
+        }
+        .hk-nav-link-icon {
+          margin-left: 0;
+          &.hk-nav-link-icon-about {
+            font-weight: 900;
+            .hk-nav-link-icon-about-tag {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hk-main {
+    .hk-section {
+      width: 100%;
+      padding-top: 4rem;
+      &.hk-section-about {
+        flex-direction: column;
+        .hk-about-text-container {
+          width: 100%;
+          margin: auto;
+          .hk-section-header {
+            margin-top: 0;
+          }
+        }
+        .hk-about-img-container {
+          width: 100%;
+        }
+      }
+      &.hk-section-skills {
+        .hk-skills {
+          flex-direction: column;
+          .hk-skill {
+            font-size: 3rem;
+            margin-right: 0rem;
+            margin-bottom: 5rem;
+            .hk-skill-logo {
+            }
+            .hk-skill-label {
+            }
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .section-back-tag {
+        font-size: 5rem;
+        left: calc(100vw - -1rem);
+        top: 4rem;
+        transform: rotate(90deg);
+      }
+      &.hk-section-contact-me {
+        .hk-contact-options {
+          .hk-contact-option {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
