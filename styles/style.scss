@@ -89,8 +89,8 @@
           margin-bottom: 5rem;
           padding: 1rem;
           background: white;
-          overflow: hidden;
-          border-radius: 1rem;
+          // overflow: hidden;
+          // border-radius: 1rem;
           .hk-skill-logo {
             position: absolute;
             opacity: 0.2;
@@ -192,21 +192,23 @@
       }
     }
     &:nth-of-type(2n) {
-      background: #efefef;
+      // background: #efefef;
     }
 
     .section-back-tag {
+      font-family: "Times New Roman", Times, serif;
       position: absolute;
 
       top: 2rem;
       /* left: 120px; */
       font-weight: bold;
-      font-size: 10rem;
-      color: #286ec5;
+      font-size: 20rem;
+      color: #c7bc0a;
       opacity: 0.2;
       /* transform: rotate(90deg); */
       transform-origin: top left;
       white-space: nowrap;
+      text-shadow: 10px 10px #bdbdbd;
     }
   }
 }
@@ -279,7 +281,7 @@
         }
       }
       .section-back-tag {
-        font-size: 5rem;
+        font-size: 6rem;
         left: calc(100vw - -1rem);
         top: 4rem;
         transform: rotate(90deg);
