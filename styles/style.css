@@ -67,14 +67,13 @@
   width: 100%;
   margin-top: auto;
 }
-.hk-main .hk-section.hk-section-about .section-back-tag {
-  top: 0rem;
-}
 .hk-main .hk-section.hk-section-skills {
   min-height: unset;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills {
+  position: relative;
   justify-content: space-between;
+  z-index: 1;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill {
   position: relative;
@@ -82,24 +81,58 @@
   margin-right: 0rem;
   margin-bottom: 5rem;
   padding: 1rem;
-  background: white;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-logo {
   position: absolute;
-  opacity: 0.2;
   font-size: 7rem;
-  top: -31px;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -70%);
   color: #286ec5;
-  left: -1.2rem;
 }
-.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-label {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 800;
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-logo .hk-skill-logo-icon {
+  background-color: white;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-content {
+  position: relative;
+  text-align: left;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-content .hk-skill-label {
+  font-size: 3rem;
+  font-weight: 100;
   color: #286ecf;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-content .hk-skill-proficiency {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555555;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill:last-of-type {
   margin-right: 0;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-html .hk-skill-logo {
+  color: #fcddd2;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-html .hk-skill-content .hk-skill-label {
+  color: #f25320;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-css .hk-skill-logo {
+  color: #cce1ef;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-css .hk-skill-content .hk-skill-label {
+  color: #016ab1;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-js .hk-skill-logo {
+  color: #fcf6cc;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-js .hk-skill-content .hk-skill-label {
+  color: #f2d400;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-angular .hk-skill-logo {
+  color: #f6ccd5;
+}
+.hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-angular .hk-skill-content .hk-skill-label {
+  color: #d2002f;
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node {
   display: flex;
@@ -166,13 +199,12 @@
   margin-left: 1rem;
 }
 .hk-main .hk-section .section-back-tag {
-  font-family: "Times New Roman", Times, serif;
   position: absolute;
   top: 2rem;
   /* left: 120px; */
-  font-weight: bold;
-  font-size: 20rem;
-  color: #c7bc0a;
+  font-weight: 100;
+  font-size: 14rem;
+  color: #000000;
   opacity: 0.2;
   /* transform: rotate(90deg); */
   transform-origin: top left;
@@ -226,6 +258,9 @@
   .hk-main .hk-section.hk-section-about .hk-about-img-container {
     width: 100%;
   }
+  .hk-main .hk-section.hk-section-skills {
+    padding-right: 4rem;
+  }
   .hk-main .hk-section.hk-section-skills .hk-skills {
     flex-direction: column;
   }
@@ -234,11 +269,27 @@
     margin-right: 0rem;
     margin-bottom: 5rem;
   }
+  .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-logo {
+    left: unset;
+    right: unset;
+  }
+  .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill:nth-of-type(2n + 1) .hk-skill-logo {
+    right: 0;
+    transform: translate(50%, -70%);
+  }
+  .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill:nth-of-type(2n + 1) .hk-skill-content {
+    text-align: right;
+  }
+  .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill:nth-of-type(2n) .hk-skill-logo {
+    left: 0;
+    transform: translate(-50%, -70%);
+  }
   .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill:last-of-type {
     margin-bottom: 0;
   }
   .hk-main .hk-section .section-back-tag {
-    font-size: 6rem;
+    font-size: 8rem;
+    letter-spacing: 2rem;
     left: calc(100vw + 1rem);
     top: 4rem;
     transform: rotate(90deg);
