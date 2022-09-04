@@ -10,7 +10,48 @@ document.addEventListener("DOMContentLoaded", () => {
   setSectionalOffsetTops();
   setCurrentActiveSectionIndex(document.scrollingElement.scrollTop);
   setActiveHeaderTab(currentActiveSectionIndex);
+
+  let currentClientY = 0;
+  let finalClientY = 0;
+  let canAnimateAboutMe = true;
+  document.body.addEventListener("touchstart", (e) => {
+    currentClientY = e.touches[0].clientY;
+  });
+  document.body.addEventListener("touchmove", (e) => {
+    finalClientY = e.touches[0].clientY;
+  });
+  document.body.addEventListener("touchend", (e) => {
+    if (canAnimateAboutMe) {
+      const description = document.querySelector(".hk-section-description");
+      const textContainer = document.querySelector(".hk-about-text-container");
+      const header = document.querySelector(".hk-section-header");
+      if (currentClientY - finalClientY > 0) {
+        description.classList.remove("display-none");
+        setTimeout(() => {
+          textContainer.classList.add("hk-about-text-container-scroll-down");
+          setTimeout(() => {
+            header.classList.add("display-none");
+            document.body.style.overflow = "auto";
+          }, 300);
+        }, 100);
+      } else {
+        header.classList.remove("display-none");
+        setTimeout(() => {
+          textContainer.classList.remove("hk-about-text-container-scroll-down");
+          setTimeout(() => {
+            description.classList.add("display-none");
+            document.body.style.overflow = "hidden";
+          }, 300);
+        }, 100);
+      }
+    }
+  });
   document.addEventListener("scroll", (event) => {
+    if (event.target.scrollingElement.scrollTop === 0) {
+      canAnimateAboutMe = true;
+    } else {
+      canAnimateAboutMe = false;
+    }
     toggleHeaderShadow(event.target.scrollingElement);
     setCurrentActiveSectionIndex(event.target.scrollingElement.scrollTop);
     setActiveHeaderTab(currentActiveSectionIndex);
