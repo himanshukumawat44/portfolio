@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   setSectionalOffsetTops();
   setCurrentActiveSectionIndex(document.scrollingElement.scrollTop);
   setActiveHeaderTab(currentActiveSectionIndex);
+
+  document.addEventListener("scroll", (event) => {
+    toggleHeaderShadow(event.target.scrollingElement);
+    setCurrentActiveSectionIndex(event.target.scrollingElement.scrollTop);
+    setActiveHeaderTab(currentActiveSectionIndex);
+  });
 });
 
 function toggleHeaderShadow(scrollElement) {
