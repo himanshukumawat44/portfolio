@@ -3,6 +3,7 @@
 * {
   box-sizing: border-box;
 }
+
 :root {
   --page-padding-h: 3rem;
   --header-height: 4rem;
@@ -15,6 +16,7 @@ html {
   // font-family: "Playfair Display", serif;
   // font-family: "Times New Roman", Times, serif;
 }
+
 body {
   max-width: 125rem;
   margin: auto;
@@ -23,22 +25,26 @@ body {
 .flex {
   display: flex;
 }
+
 .flex-c {
   display: flex;
   flex-direction: column;
 }
+
 .jc-center {
   justify-content: center;
 }
+
 .ai-center {
   align-items: center;
 }
 
 /*FONT*/
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
 }
+
 p {
   font-size: 1.25rem;
   color: #5e5e5e;
@@ -47,6 +53,7 @@ p {
 .display-none {
   display: none;
 }
+
 .display-block {
   display: block;
 }
@@ -56,9 +63,11 @@ p {
     --page-padding-h: 2rem;
     overflow: hidden;
   }
+
   h1 {
     font-size: 2.5rem;
   }
+
   p {
     font-size: 1rem;
     margin: 0;

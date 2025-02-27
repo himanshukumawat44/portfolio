@@ -26,7 +26,7 @@
   color: black;
 }
 .hk-header .hk-nav .hk-nav-link.hk-nav-link-active, .hk-header .hk-nav .hk-nav-link.hk-nav-link-active:hover {
-  background-color: #c7bc0a1a;
+  background-color: rgba(199, 188, 10, 0.1019607843);
   color: #c7bc0a;
   cursor: unset;
   position: relative;
@@ -270,7 +270,6 @@
   .hk-header .hk-nav .hk-nav-link:hover {
     background-color: unset;
   }
-
   .hk-main .hk-section {
     width: 100%;
     padding-top: 8rem;
@@ -285,13 +284,6 @@
     position: relative;
     z-index: 2;
   }
-  .hk-main .hk-section.hk-section-about .hk-about-text-container .hk-section-header,
-.hk-main .hk-section.hk-section-about .hk-about-text-container .hk-section-description {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 0.3s cubic-bezier(0.07, 0.59, 0.58, 0.98);
-  }
   .hk-main .hk-section.hk-section-about .hk-about-text-container .hk-section-header {
     margin-top: 0;
     font-size: 3.5rem;
@@ -303,8 +295,6 @@
   .hk-main .hk-section.hk-section-about .hk-about-text-container .hk-section-description {
     width: calc(100% - 4rem);
     font-weight: bold;
-    opacity: 0;
-    transform: translate(0rem, 10rem) scale(0.8, 0.8);
     padding: 1.5rem;
     background: white;
     z-index: 2;
