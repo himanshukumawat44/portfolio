@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - master  # Triggers when a PR is created for master
+    paths-ignore:
+      - 'README.md'
+      - '.git/*'
+      - '.github/*'
+      - 'styles/common-style.css.map'
+      - 'styles/common-style.scss'
+      - 'styles/style.css.map'
+      - 'styles/style.scss'
 
 jobs:
   deploy:
