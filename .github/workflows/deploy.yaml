@@ -1,7 +1,7 @@
 name: Deploy to S3 on Merge Request
 
 on:
-  pull_request:
+  push:
     branches:
       - master  # Triggers when a PR is created for master
 
