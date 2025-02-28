@@ -8,9 +8,8 @@
   z-index: 3;
   box-shadow: 10px 10px rgb(189 189 189 / 20%);
   border: solid thin #f2f2f2;
-  // &.hk-header-has-shadow {
-  //   box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
-  // }
+  transition: 0.2s all cubic-bezier(0.07, 0.85, 0.57, 1);
+  transform-origin: right;
   .hk-nav {
     justify-content: end;
     height: 100%;
@@ -207,18 +206,15 @@
               width: 3rem;
               height: 3rem;
               border-radius: 50%;
-              background: #286ec5;
-              color: white;
-              border: solid 0.25rem #286ec5;
             }
 
             &::after {
               content: "";
               position: absolute;
-              top: 3rem;
-              width: 0.25rem;
+              top: 2.5rem;
+              width: 1rem;
               height: 100%;
-              background: #286ec5;
+              background: rgb(40 110 197 / 30%);
             }
           }
           .node-content {
@@ -229,13 +225,27 @@
               color: #7c7c7c;
               margin-top: 0.75rem;
             }
-            .content-title {
+            .content-designation {
+              margin-top: 0.5rem;
               font-size: 1.5rem;
-              font-weight: bold;
+              /* font-weight: bold; */
+              color: rgb(40 110 197);
             }
-            .content-description {
-              margin-top: 1rem;
+            .content-company {
+              margin-top: 0.25rem;
               font-weight: bold;
+              color: #a1a1a1;
+            }
+            .content-location {
+              margin-top: 1rem;
+            }
+            .content-skills-utilized {
+              display: flex;
+              gap: 1rem;
+              margin-top: 0.25rem;
+              font-weight: bold;
+              font-size: 1.5rem;
+              color: rgb(40 110 197 / 60%);
             }
           }
         }
@@ -300,8 +310,6 @@
           right: -1rem;
           font-size: 3rem;
           opacity: 0.2;
-          transform: scale(1, 1);
-          transition: 0.2s all cubic-bezier(0.07, 0.85, 0.57, 1);
         }
         &.hk-nav-link-about {
           .hk-nav-link-icon {
@@ -309,6 +317,9 @@
           }
         }
       }
+    }
+    &.hk-header-scrolled {
+      transform: scale(0.8);
     }
   }
 }
@@ -352,7 +363,7 @@
           margin-bottom: auto;
           position: relative;
           z-index: 2;
-          
+
           .hk-section-header {
             margin-top: 0;
             font-size: 3.5rem;
@@ -433,6 +444,22 @@
         left: calc(100vw + 1rem);
         top: 8rem;
         transform: rotate(90deg);
+      }
+      &.hk-section-experience {
+        padding-left: 0;
+
+        .hk-exp-timeline {
+          .hk-timeline-node {
+            .node-leading {
+              .leading-avatar {
+              }
+            }
+
+            .node-content {
+              margin-left: 0rem;
+            }
+          }
+        }
       }
       &.hk-section-contact-me {
         .hk-contact-options {
