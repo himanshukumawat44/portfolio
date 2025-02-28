@@ -8,6 +8,8 @@
   z-index: 3;
   box-shadow: 10px 10px rgba(189, 189, 189, 0.2);
   border: solid thin #f2f2f2;
+  transition: 0.2s all cubic-bezier(0.07, 0.85, 0.57, 1);
+  transform-origin: right;
 }
 .hk-header .hk-nav {
   justify-content: end;
@@ -165,17 +167,14 @@
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: #286ec5;
-  color: white;
-  border: solid 0.25rem #286ec5;
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-leading::after {
   content: "";
   position: absolute;
-  top: 3rem;
-  width: 0.25rem;
+  top: 2.5rem;
+  width: 1rem;
   height: 100%;
-  background: #286ec5;
+  background: rgba(40, 110, 197, 0.3);
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content {
   margin-left: 1rem;
@@ -186,13 +185,27 @@
   color: #7c7c7c;
   margin-top: 0.75rem;
 }
-.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-title {
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-designation {
+  margin-top: 0.5rem;
   font-size: 1.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
+  color: rgb(40, 110, 197);
 }
-.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-description {
-  margin-top: 1rem;
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-company {
+  margin-top: 0.25rem;
   font-weight: bold;
+  color: #a1a1a1;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-location {
+  margin-top: 1rem;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.25rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgba(40, 110, 197, 0.6);
 }
 .hk-main .hk-section.hk-section-contact-me .hk-contact-options .hk-contact-option {
   font-size: 3rem;
@@ -236,11 +249,12 @@
     right: -1rem;
     font-size: 3rem;
     opacity: 0.2;
-    transform: scale(1, 1);
-    transition: 0.2s all cubic-bezier(0.07, 0.85, 0.57, 1);
   }
   .hk-header .hk-nav .hk-nav-link.hk-nav-link-about .hk-nav-link-icon {
     line-height: 2rem;
+  }
+  .hk-header.hk-header-scrolled {
+    transform: scale(0.8);
   }
 }
 @media (max-width: 600px) {
@@ -356,6 +370,12 @@
     left: calc(100vw + 1rem);
     top: 8rem;
     transform: rotate(90deg);
+  }
+  .hk-main .hk-section.hk-section-experience {
+    padding-left: 0;
+  }
+  .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content {
+    margin-left: 0rem;
   }
   .hk-main .hk-section.hk-section-contact-me .hk-contact-options .hk-contact-option {
     font-size: 1.5rem;

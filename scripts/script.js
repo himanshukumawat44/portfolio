@@ -7,20 +7,20 @@ document.addEventListener("DOMContentLoaded", () => {
   setActiveHeaderTab(currentActiveSectionIndex);
 
   document.addEventListener("scroll", (event) => {
-    toggleHeaderShadow(event.target.scrollingElement);
+    updateHeaderStylesOnScroll(event.target.scrollingElement);
     setCurrentActiveSectionIndex(event.target.scrollingElement.scrollTop);
     setActiveHeaderTab(currentActiveSectionIndex);
   });
 });
 
-function toggleHeaderShadow(scrollElement) {
+function updateHeaderStylesOnScroll(scrollElement) {
   const scrollTop = scrollElement.scrollTop;
 
   const header = document.querySelector(".hk-header");
   if (scrollTop > 50) {
-    header.classList.add("hk-header-has-shadow");
+    header.classList.add("hk-header-scrolled");
   } else {
-    header.classList.remove("hk-header-has-shadow");
+    header.classList.remove("hk-header-scrolled");
   }
 }
 function setActiveHeaderTab(activeTabIndex) {
