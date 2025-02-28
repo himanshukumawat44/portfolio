@@ -181,9 +181,14 @@
     }
     &.hk-section-experience {
       .hk-exp-timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         .hk-timeline-node {
           display: flex;
           margin-bottom: 2rem;
+          box-shadow: 10px 10px rgba(189, 189, 189, 0.2);
+          border: solid thin #c7bc0a;
 
           &:last-of-type {
             margin-bottom: 0;
@@ -219,11 +224,12 @@
           }
           .node-content {
             margin-left: 1rem;
+            flex-direction: column;
+            padding: 1rem 1rem 1rem 0;
             .content-time-range {
               font-size: 1rem;
               font-weight: bold;
               color: #7c7c7c;
-              margin-top: 0.75rem;
             }
             .content-designation {
               margin-top: 0.5rem;
@@ -246,6 +252,28 @@
               font-weight: bold;
               font-size: 1.5rem;
               color: rgb(40 110 197 / 60%);
+
+              .fa-html5{
+                color: #f25320;
+              }
+              .fa-css3-alt{
+                color: #016ab1;
+              }
+              .fa-js{
+                color: #f2d400;
+              }
+              .fa-angular{
+                color: #d2002f;
+              }
+              .fa-react{
+                color: #68dbfb;
+              }
+              .fa-android{
+                color: #a5bb46;
+              }
+              .fa-app-store-ios{
+                color: #2985f4;
+              }
             }
           }
         }
