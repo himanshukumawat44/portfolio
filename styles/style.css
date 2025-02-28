@@ -144,9 +144,16 @@
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill.hk-skill-angular .hk-skill-content .hk-skill-label {
   color: #d2002f;
 }
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node {
   display: flex;
   margin-bottom: 2rem;
+  box-shadow: 10px 10px rgba(189, 189, 189, 0.2);
+  border: solid thin #c7bc0a;
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node:last-of-type {
   margin-bottom: 0;
@@ -178,12 +185,13 @@
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content {
   margin-left: 1rem;
+  flex-direction: column;
+  padding: 1rem 1rem 1rem 0;
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-time-range {
   font-size: 1rem;
   font-weight: bold;
   color: #7c7c7c;
-  margin-top: 0.75rem;
 }
 .hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-designation {
   margin-top: 0.5rem;
@@ -206,6 +214,27 @@
   font-weight: bold;
   font-size: 1.5rem;
   color: rgba(40, 110, 197, 0.6);
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-html5 {
+  color: #f25320;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-css3-alt {
+  color: #016ab1;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-js {
+  color: #f2d400;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-angular {
+  color: #d2002f;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-react {
+  color: #68dbfb;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-android {
+  color: #a5bb46;
+}
+.hk-main .hk-section.hk-section-experience .hk-exp-timeline .hk-timeline-node .node-content .content-skills-utilized .fa-app-store-ios {
+  color: #2985f4;
 }
 .hk-main .hk-section.hk-section-contact-me .hk-contact-options .hk-contact-option {
   font-size: 3rem;
