@@ -1,7 +1,7 @@
 .hk-header {
   position: fixed;
   top: 5rem;
-  right: 2rem;
+  right: max(3rem, (100vw - 80rem) / 2 + 3rem);
   transform-origin: top left;
   height: var(--header-height);
   background: white;
@@ -86,6 +86,8 @@
 .hk-main .hk-section.hk-section-skills .hk-skills {
   position: relative;
   justify-content: space-between;
+  padding-right: 3rem;
+  gap: 2rem;
   z-index: 1;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill {
@@ -93,7 +95,7 @@
   font-size: 1rem;
   margin-right: 0rem;
   margin-bottom: 5rem;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill .hk-skill-logo {
   position: absolute;
@@ -368,6 +370,7 @@
   .hk-main .hk-section.hk-section-skills .hk-skills {
     flex-direction: column;
     align-items: start;
+    padding-right: 2rem;
   }
   .hk-main .hk-section.hk-section-skills .hk-skills .hk-skill {
     font-size: 3rem;
